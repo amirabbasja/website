@@ -1,0 +1,368 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abbas Jafarpour Mahalleh</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+
+  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=M6tfXIs8TvOlfL8oSJxIXzQbr1QM2orjkTDkOiDh5Ua8iU_5X1N4Kwk7uCj422bQ" charset="UTF-8"></script><style>
+    :root {
+      --bg: #7085ac;
+      --card: #ffffff;
+      --text: #1f2a44;
+      --muted: #566073;
+      --accent: #32487d; /* McGill-inspired red */
+      --accent-soft: #dce8ff;
+      --border: #e4e8f1;
+      --shadow: 0 20px 50px rgba(18, 23, 53, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+      line-height: 1.7;
+      color: var(--text);
+      background: radial-gradient(circle at 20% 20%, #ffffff, var(--bg)),
+                  linear-gradient(135deg, #f2f5fc 0%, #eef1f7 100%);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    h1, h2, h3 {
+      font-family: 'Merriweather', 'Georgia', serif;
+      margin: 0 0 0.35em;
+      color: var(--text);
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 18px 48px;
+    }
+
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(180px, 240px) 1fr;
+      gap: 28px;
+      padding: 26px 26px 28px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -40% 55% 0 -30%;
+      background: radial-gradient(circle, rgba(179,0,27,0.12), transparent 60%);
+      transform: rotate(-6deg);
+      pointer-events: none;
+    }
+
+    .portrait {
+      margin: 0;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: linear-gradient(160deg, #fefefe 0%, #f4f6fb 100%);
+      box-shadow: 0 15px 30px rgba(17, 25, 54, 0.08);
+      position: relative;
+      z-index: 1;
+    }
+
+    .portrait img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .hero-body { position: relative; z-index: 1; }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      font-size: 0.82rem;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .lead {
+      margin: 10px 0 16px;
+      color: var(--muted);
+      max-width: 720px;
+      font-size: 1.02rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 12px 0 14px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 16px;
+      border-radius: 12px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.18s ease;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 12px 22px rgba(0, 15, 179, 0.25);
+    }
+    .button.primary:hover { filter: brightness(0.92); text-decoration: none; }
+
+    .button.ghost {
+      background: #fff;
+      color: var(--text);
+      border-color: var(--border);
+    }
+    .button.ghost:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .tag-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+    .tag {
+      background: #f0f3fa;
+      color: #2f3b52;
+      padding: 3px 5px;
+      border-radius: 4px;
+      font-size: 0.86rem;
+      border: 1px solid #9298a8;
+    }
+
+    .pill-nav {
+      margin: 18px 0 6px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .pill {
+      background: #ffffffaa;
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 13px;
+      border-radius: 3px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      box-shadow: 0 6px 18px rgba(17, 25, 54, 0.08);
+      backdrop-filter: blur(8px);
+      text-decoration: none;
+    }
+
+    .pill:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+
+    .content { margin-top: 18px; }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 20px 20px 18px;
+      box-shadow: var(--shadow);
+      margin-top: 22px;
+    }
+
+    .card h2 { display: inline-flex; align-items: center; gap: 8px; font-size: 1.32rem; }
+    .card p { margin: 6px 0 10px; color: var(--muted); }
+
+    .section-header { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+
+    .soft-pill {
+      background: var(--accent-soft);
+      color: var(--accent);
+      padding: 6px 12px;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      border: 1px solid rgba(90, 84, 211, 0.2);
+    }
+
+    .keywords { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+    .keywords .tag { background: #ffffff; color: #4352c3; border-color: #a8a2a3; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      align-items: start;
+    }
+
+    address { font-style: normal; color: var(--muted); line-height: 1.7; }
+
+    details {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--accent-soft);
+      padding: 14px 16px;
+      margin-top: 10px;
+    }
+
+    summary {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-weight: 700;
+      color: var(--text);
+      list-style: none;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #fff;
+      color: var(--accent);
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+    details[open] summary::after { content: "-"; }
+
+    .scroll-area {
+      margin-top: 12px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      max-height: 360px;
+      overflow: auto;
+      color: var(--muted);
+    }
+
+    ul.clean { margin: 6px 0 0 0; padding-left: 18px; }
+    ul.clean li { margin: 6px 0; }
+
+    .highlight {
+      background: linear-gradient(135deg, #f9fcff 0%, #f3f6fd 100%);
+      border: 1px solid rgba(0, 18, 179, 0.2);
+    }
+
+    .footer {
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      text-align: center;
+    }
+
+    @media (max-width: 720px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero::before { inset: -60% 0 0 20%; }
+      .hero-actions { justify-content: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="hero" id="top">
+      <figure class="portrait">
+        <img src="./src/portrait.jpg" alt="Portrait">
+      </figure>
+      <div class="hero-body">
+        <div class="eyebrow">Prospective Ph.D student</div>
+        <h1>Abbas Jafarpour Mahalleh</h1>
+        <p class="lead">
+            A mechanical engineering graduate from the University of Tehran with a strong interest in applying artificial intelligence and data-driven methods to address complex real-world engineering and industrial challenges. Possesses a solid foundation in classical mechanical engineering principles, complemented by growing expertise in leveraging AI techniques to enhance analysis, optimization, and decision-making across multidisciplinary domains.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="./src/Abbas-Jafarpour-CV.pdf">Curriculum Vitae (PDF)</a>
+          <a class="button ghost" href="https://scholar.google.co.uk/citations?user=V0XAqaYAAAAJ">Full publications</a>
+          <a class="button ghost" href="https://www.linkedin.com/in/abbas-jafarpour-mahalleh-32bb6855/">Linked In</a>
+          <a class="button ghost" href="https://github.com/amirabbasja">GitHub</a>
+        </div>
+        <div class="tag-row">
+          <span class="tag">Machine learning</span>
+          <span class="tag">Reinforcement learning</span>
+          <span class="tag">Biomechanics</span>
+          <span class="tag">Optimization</span>
+          <span class="tag">Robotics</span>
+          <span class="tag">Mathematical modeling</span>
+        </div>
+      </div>
+    </header>
+
+    <nav class="pill-nav" aria-label="Page shortcuts">
+      <a class="pill" href="#researchtopics">Research</a>
+      <a class="pill" href="#pucations">Publications</a>
+      <a class="pill" href="#contact">Contact</a>
+    </nav>
+
+    <main class="content">
+      <section id="researchtopics" class="card" aria-label="Research areas">
+        <div class="section-header">
+          <h2>Research Experiences</h2>
+          <span class="soft-pill">University of Tehran</span>
+        </div>
+        <p>
+        At the master’s level, research focused on the development of a device to help people with hand tremors. The work included nonlinear and recursive modeling of various dynamical systems, accurate biomechanical modeling of human hand motion, and custom numerical solvers implemented in MATLAB and Python. Optimal design parameters were obtained through large-scale numerical optimization leveraging parallel computation on high-performance computing systems. The device’s performance was evaluated using simulations driven by real-world tremor time-series data collected from patients. Post-master’s research centers on the application of advanced machine learning and reinforcement learning methods, incorporating and spiking neural networks, to biomechanical and engineering systems.
+        </p>
+        <div class="keywords">
+          <span class="tag">Optimization</span>
+          <span class="tag">Mathematical modeling</span>
+          <span class="tag">Neural networks</span>
+          <span class="tag">Dynamic modeling</span>
+          <span class="tag">Spiking neural networks</span>
+          <span class="tag">Reinforcement learning</span>
+        </div>
+      </section>
+
+      <section id="pucations" class="card highlight" aria-label="Publications">
+        <div class="section-header">
+          <h2>Publications</h2>
+        </div>
+        <p>
+          <span style ="font-weight: bold; color: var(--accent);">Conference</span>
+          <ul>
+            <li>A. Jafarpour Mahalleh and M. Zakerzadeh, “A Nonlinear Energy Sink For Tremor Suppression Using Shape Memory Alloys,” in Journal of Vibration and Control (JVC), 21 Jun 2024</li>
+            <li>A. Jafarpour Mahalleh, M. Zakerzadeh, “A Vibration Absorber For Absorbing Tremors In Wrist” in Proc. of the 13th international conference on acoustics and vibration, Tehran, Iran, 2023</li>
+            <li>M. R. Sayyed Noorani, A. Jafarpour Mahalleh, K. Khojand, “DDQN-Learning of Hill-Type Musculoskeletal Arm Model for Elbow Motor Control”, in Proc. Iranian Conference of Biomedical Engineering, Tabriz, Iran, 2025</li>
+          </ul>
+        </p>
+      </section>
+
+      <section id="contact" class="card" aria-label="Contact">
+        <div class="two-col">
+          <div>
+            <h2>Contact</h2>
+            <p><b>Email:</b> jafarpourabbas [at] googlemail [dot] com<br>
+          </div>
+        </div>
+      </section>
+
+    <div class="footer">
+      Made by Abbas!
+    </div>
+  </div>
+</body>
+</html>
